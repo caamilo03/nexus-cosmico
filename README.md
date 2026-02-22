@@ -1,2 +1,2 @@
-# nexus-c-smico
+# nexus-cosmico
 Just chilling bro
