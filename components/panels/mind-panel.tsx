@@ -9,7 +9,7 @@ interface MindPanelProps {
 
 const quotes = [
   {
-    text: "La mente es como el agua: cuando esta calmada, refleja la realidad con claridad.",
+    text: "La mente es como el agua: cuando está calmada, refleja la realidad con claridad.",
     author: "Proverbio Zen",
   },
   {

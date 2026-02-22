@@ -16,7 +16,7 @@ const portals = [
   },
   {
     id: "sound",
-    title: "El Jardin Sonoro",
+    title: "El Jardín Sonoro",
     color: "#06b6d4",
     secondaryColor: "#14b8a6",
   },
@@ -28,7 +28,7 @@ const portals = [
   },
   {
     id: "connection",
-    title: "Conexion Profunda",
+    title: "Conexión Profunda",
     color: "#10b981",
     secondaryColor: "#22d3ee",
   },
@@ -54,7 +54,7 @@ export function ExplorationPanel({ onNavigate }: ExplorationPanelProps) {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-          Elige tu Dimension
+          Elige tu Dimensión
         </span>
       </motion.h2>
 
@@ -64,7 +64,7 @@ export function ExplorationPanel({ onNavigate }: ExplorationPanelProps) {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        Cada portal te llevara a una experiencia unica de introspección
+        Cada portal te llevará a una experiencia única de introspección
       </motion.p>
 
       {/* Portals grid */}

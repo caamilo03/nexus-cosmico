@@ -72,7 +72,7 @@ export function ConnectionPanel({ onBack }: ConnectionPanelProps) {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-          Conexion Profunda
+          Conexión Profunda
         </span>
       </motion.h2>
 
@@ -98,7 +98,7 @@ export function ConnectionPanel({ onBack }: ConnectionPanelProps) {
               <textarea
                 value={reflection}
                 onChange={(e) => setReflection(e.target.value)}
-                placeholder="¿Que descubriste en este viaje? Escribe tu reflexion..."
+                placeholder="¿Qué descubriste en este viaje? Escribe tu reflexión..."
                 className="w-full h-40 p-4 rounded-2xl bg-white/5 border border-white/10 text-white/90 placeholder:text-white/30 resize-none focus:outline-none focus:border-emerald-500/50 focus:ring-2 focus:ring-emerald-500/20 transition-all"
               />
               <motion.div
@@ -159,9 +159,9 @@ export function ConnectionPanel({ onBack }: ConnectionPanelProps) {
               </svg>
             </motion.div>
 
-            <h3 className="text-2xl font-medium text-white/90 mb-3">Gracias por tu Reflexion</h3>
+            <h3 className="text-2xl font-medium text-white/90 mb-3">Gracias por tu Reflexión</h3>
             <p className="text-white/50 max-w-sm mx-auto">
-              Tu viaje hacia la conciencia continua. Lleva esta paz interior contigo.
+              Tu viaje hacia la conciencia continúa. Lleva esta paz interior contigo.
             </p>
 
             <motion.button

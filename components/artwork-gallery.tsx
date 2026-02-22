@@ -19,7 +19,7 @@ const artworks = [
   },
   {
     id: 3,
-    title: "Geometria Sagrada",
+    title: "Geometría Sagrada",
     gradient: "from-orange-500 via-rose-500 to-purple-600",
     pattern: "geometric",
   },

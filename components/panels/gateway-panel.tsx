@@ -61,7 +61,7 @@ export function GatewayPanel({ onEnter }: GatewayPanelProps) {
           }}
           transition={{ duration: 3, repeat: Infinity }}
         >
-          Nexus Cosmico
+          Nexus Cósmico
         </motion.span>
       </motion.h1>
 

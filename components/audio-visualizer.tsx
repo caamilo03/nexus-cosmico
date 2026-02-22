@@ -108,7 +108,7 @@ export function AudioVisualizer() {
       </motion.button>
 
       <p className="text-center text-muted-foreground text-sm md:text-base max-w-md">
-        Cierra los ojos y deja que los sonidos te guien hacia tu interior
+        Cierra los ojos y deja que los sonidos te guíen hacia tu interior
       </p>
     </div>
   )

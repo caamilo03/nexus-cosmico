@@ -15,25 +15,12 @@ const _orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: 'Nexus Cosmico - Un Viaje a la Conciencia',
-  description: 'Una experiencia psicodelica e introspectiva hacia las profundidades de la mente',
+  title: 'Nexus Cósmico - Un Viaje a la Conciencia',
+  description: 'Una experiencia psicodélica e introspectiva hacia las profundidades de la mente',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/nebulosa.png', // Apunta directamente a tu nueva imagen en public/
+    apple: '/nebulosa.png', // Esto es para cuando alguien guarda tu web en la pantalla de inicio de un iPhone
   },
 }
 
