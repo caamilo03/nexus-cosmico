@@ -7,6 +7,9 @@ export function AudioVisualizer() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [bars, setBars] = useState<number[]>(Array(32).fill(0.2))
   const animationRef = useRef<number>(0)
+  
+  // Referencia para controlar el audio
+  const audioRef = useRef<HTMLAudioElement>(null)
 
   useEffect(() => {
     if (!isPlaying) {
@@ -29,9 +32,24 @@ export function AudioVisualizer() {
     return () => cancelAnimationFrame(animationRef.current)
   }, [isPlaying])
 
+  // Función que maneja tanto el audio como la animación
+  const handleTogglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+      } else {
+        audioRef.current.play()
+      }
+    }
+    setIsPlaying(!isPlaying)
+  }
+
   return (
     <div className="flex flex-col items-center gap-8">
-      {/* Visualizer bars */}
+      {/* Etiqueta de audio oculta */}
+      <audio ref={audioRef} src="/sounds/jardin_zen.mp3" loop />
+
+      {/* Barras del visualizador */}
       <div className="flex items-end justify-center gap-1 h-48 md:h-64 w-full max-w-xl px-4">
         {bars.map((height, i) => (
           <motion.div
@@ -47,9 +65,9 @@ export function AudioVisualizer() {
         ))}
       </div>
 
-      {/* Play/Pause button */}
+      {/* Botón Play/Pause */}
       <motion.button
-        onClick={() => setIsPlaying(!isPlaying)}
+        onClick={handleTogglePlay}
         className="relative w-20 h-20 rounded-full flex items-center justify-center"
         style={{
           background: "linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%)",
@@ -57,7 +75,7 @@ export function AudioVisualizer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        {/* Glow effect */}
+        {/* Efecto de brillo */}
         <motion.div
           className="absolute inset-0 rounded-full"
           style={{
@@ -71,7 +89,7 @@ export function AudioVisualizer() {
           transition={{ duration: 2, repeat: Infinity }}
         />
 
-        {/* Icon */}
+        {/* Icono */}
         {isPlaying ? (
           <div className="flex gap-1.5 relative z-10">
             <div className="w-2 h-8 bg-white rounded-sm" />

@@ -16,7 +16,7 @@ export function SoundPanel({ onBack }: SoundPanelProps) {
       exit={{ opacity: 0, scale: 1.5 }}
       transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
     >
-      {/* Sound waves background effect */}
+      {/* Efecto de fondo de ondas de sonido */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -37,7 +37,7 @@ export function SoundPanel({ onBack }: SoundPanelProps) {
         ))}
       </div>
 
-      {/* Title */}
+      {/* Título */}
       <motion.h2
         className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center"
         style={{
@@ -48,7 +48,7 @@ export function SoundPanel({ onBack }: SoundPanelProps) {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <span className="bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
-          El Jardin Sonoro
+          El Jardín Sonoro
         </span>
       </motion.h2>
 
@@ -61,7 +61,7 @@ export function SoundPanel({ onBack }: SoundPanelProps) {
         Sumérgete en frecuencias que resuenan con tu ser interior
       </motion.p>
 
-      {/* Audio Visualizer */}
+      {/* Llamada al Visualizador de Audio (el otro archivo) */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export function SoundPanel({ onBack }: SoundPanelProps) {
         <AudioVisualizer />
       </motion.div>
 
-      {/* Navigation */}
+      {/* Botón de Navegación (Usa la propiedad onBack) */}
       <motion.button
         onClick={onBack}
         className="absolute top-8 left-8 text-white/40 hover:text-white/80 transition-colors flex items-center gap-2"
